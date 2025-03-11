@@ -18,7 +18,7 @@
 &nbsp;
 
 
-<img src="assets/newteaser.png" style="height:400px" /> 
+<!-- <img src="assets/newteaser.png" style="height:400px" />  -->
 
 
 
@@ -26,6 +26,9 @@
 
 
 &nbsp;
+
+![teaser](assets/newteaser.png)
+
 
 
 ### Introduction
