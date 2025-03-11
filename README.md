@@ -8,7 +8,7 @@
 [![arxiv](https://img.shields.io/badge/arxiv-XXXX-blue)](https://arxiv.org/abs/XXXX) 
 <!-- [![video](https://img.shields.io/badge/video-youtube-red)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
 <!-- [![media](https://img.shields.io/badge/media-AK-green)](#) -->
-[![Webpage](https://brack-wang.github.io/XField/)]
+[![Webpage](https://img.shields.io/badge/media-AK-green)](https://brack-wang.github.io/XField/) 
 <!-- [![Radiance Fields](https://img.shields.io/badge/Radiance%20Fields-green)](#)   -->
 
 
@@ -18,7 +18,7 @@
 &nbsp;
 
 
-<img src="assets/newteaser.png" style="height:200px" /> 
+<img src="assets/newteaser.png" style="height:400px" /> 
 
 
 
