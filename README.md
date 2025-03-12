@@ -7,7 +7,7 @@
 
 <p align="center"> <img src="assets/ic2.png" width="100px"> </p>
 
-[Arxiv]() | [Project](https://brack-wang.github.io/XField/)
+[Paper](https://arxiv.org/abs/2503.08596) | [Project](https://brack-wang.github.io/XField/) 
 
 <h2> X-Field: A Physically Grounded Representation for 3D X-ray Reconstruction  </h2> 
 
