@@ -6,7 +6,7 @@
 
 [Paper](https://arxiv.org/abs/2503.08596) | [Project Page](https://brack-wang.github.io/XField/)
 
-<h2> X-Field: A Physically Grounded Representation for 3D X-ray Reconstruction </h2>
+<h2> X-Field: A Physically Informed Representation for 3D X-ray Reconstruction </h2>
 
 <h2><b>🎉 Accepted as NeurIPS 2025 <span style="color:#d77f00;">Spotlight</span> !</b></h2>
 
@@ -37,7 +37,7 @@ If you find **X-Field** useful for your research, please cite:
 
 ```bibtex
 @inproceedings{wang2025xfield,
-  title     = {X-Field: A Physically Grounded Representation for 3D X-ray Reconstruction},
+  title     = {X-Field: A Physically Informed Representation for 3D X-ray Reconstruction},
   author    = {Feiran Wang and et al.},
   booktitle = {Neural Information Processing Systems (NeurIPS)},
   year      = {2025},
