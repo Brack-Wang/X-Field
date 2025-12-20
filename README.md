@@ -4,7 +4,7 @@
 
 <p align="center"> <img src="assets/ic2.png" width="100px"> </p>
 
-[Paper](https://arxiv.org/abs/2503.08596) | [Project Page](https://brack-wang.github.io/XField/)
+[Paper](https://openreview.net/pdf?id=S8XcHutp7Z) | [Project Page](https://brack-wang.github.io/XField/)
 
 <h2> X-Field: A Physically Informed Representation for 3D X-ray Reconstruction </h2>
 
