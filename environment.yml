@@ -1,0 +1,34 @@
+name: xfield
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip=22.3.1
+  - cudatoolkit=11.7
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - torchaudio=0.13.1
+  - pytorch-cuda=11.7
+  - numpy=1.24.1
+  - tqdm
+  - tensorboard
+  - tensorboardx
+  - pyyaml
+  - plyfile
+  - mkl=2024.0
+  - pip:
+    - opencv-python
+    - matplotlib
+    - pydicom
+    - tifffile
+    - imagecodecs
+    - pyvista
+    - SimpleITK
+    - scikit-image
+    - Cython==0.29.36
+    - open3d==0.18.0
+    - -e xfield/submodules/simple-knn
+    - -e xfield/submodules/xfield-rasterization
