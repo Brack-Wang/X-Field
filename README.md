@@ -143,7 +143,7 @@ python init_gaussians.py --data <data.pickle> --output <init.npy> --recon_method
 | `fdk` | FDK algorithm (default) |
 | `cgls` | Conjugate Gradient Least Squares |
 | `sart` | Simultaneous Algebraic Reconstruction |
-| `hybrid_cgls_sart_tv` | Hybrid method with TV regularization |
+| `hybrid_cgls_sart_tv` | Hybrid Initialization |
 
 </details>
 
