@@ -173,4 +173,4 @@ If you find **X-Field** useful for your research, please cite:
 
 ## Acknowledgements
 
-We gratefully acknowledge [3DGS](https://github.com/graphdeco-inria/gaussian-splatting), [X-Gaussian](https://github.com/caiyuanhao1998/X-Gaussian), and [R²-Gaussian](https://github.com/Ruyi-Zha/r2_gaussian), which provided valuable references for this implementation.
+We gratefully acknowledge [3DGS](https://github.com/graphdeco-inria/gaussian-splatting), [X-Gaussian](https://github.com/caiyuanhao1998/X-Gaussian), and [R²-Gaussian](https://github.com/Ruyi-Zha/r2_gaussian), providing valuable references for this implementation.
