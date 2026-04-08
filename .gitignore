@@ -10,3 +10,9 @@ volume_processed/
 volume_raw
 FIPS_raw
 FIPS_processed
+
+# Compiled extensions
+*.so
+*.o
+*.a
+*.dylib

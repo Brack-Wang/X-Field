@@ -265,7 +265,10 @@ __global__ void preprocessCUDA(int P,
 	float my_radius = ceil(3.f * sqrt(max(lambda1, lambda2)));
 	float2 point_image = { ndc2Pix(p_proj.x, W), ndc2Pix(p_proj.y, H) };
 	uint2 rect_min, rect_max;
-	getRect(point_image, my_radius, rect_min, rect_max, grid);
+	float theta = 0.5f * atan2f(2.0f * cov.y, cov.x - cov.z);
+	float extent1 = 3.f * sqrtf(max(lambda1, 0.1f));
+	float extent2 = 3.f * sqrtf(max(lambda2, 0.1f));
+	getRect(point_image, my_radius, extent1, extent2, theta, rect_min, rect_max, grid);
 	if ((rect_max.x - rect_min.x) * (rect_max.y - rect_min.y) == 0)
 		return;
 

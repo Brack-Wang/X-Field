@@ -53,7 +53,21 @@ __forceinline__ __device__ float pix2Ndc(float v, int S)
 }
 
 
+// Simple version: axis-aligned circle bounding
+__forceinline__ __device__ void getRect(const float2 p, int max_radius, uint2& rect_min, uint2& rect_max, dim3 grid)
+{
+	rect_min = {
+		min(grid.x, max((unsigned int)0, (unsigned int)((p.x - max_radius) / BLOCK_X))),
+		min(grid.y, max((unsigned int)0, (unsigned int)((p.y - max_radius) / BLOCK_Y)))
+	};
+	rect_max = {
+		min(grid.x, max((unsigned int)0, (unsigned int)((p.x + max_radius + BLOCK_X - 1) / BLOCK_X))),
+		min(grid.y, max((unsigned int)0, (unsigned int)((p.y + max_radius + BLOCK_Y - 1) / BLOCK_Y)))
+	};
+}
+
 // Overlap Filtering: Get the bounding rectangle of an oriented ellipse
+// max_radius serves as an upper bound to prevent numerical blow-up
 __forceinline__ __device__ void getRect(const float2 p, int max_radius, float lambda1, float lambda2, float theta, uint2& rect_min, uint2& rect_max, dim3 grid)
 {
 	float cos_t, sin_t;
@@ -64,16 +78,16 @@ __forceinline__ __device__ void getRect(const float2 p, int max_radius, float la
 	float l2_sin = lambda2 * sin_t;
 	float l2_cos = lambda2 * cos_t;
 
-	float extent_x = sqrtf(l1_cos * l1_cos + l2_sin * l2_sin);
-	float extent_y = sqrtf(l1_sin * l1_sin + l2_cos * l2_cos);
+	float extent_x = min(sqrtf(l1_cos * l1_cos + l2_sin * l2_sin), static_cast<float>(max_radius));
+	float extent_y = min(sqrtf(l1_sin * l1_sin + l2_cos * l2_cos), static_cast<float>(max_radius));
 
 	rect_min = {
-		min(grid.x, max(0, static_cast<int>((p.x - extent_x) / BLOCK_X))),
-		min(grid.y, max(0, static_cast<int>((p.y - extent_y) / BLOCK_Y)))
+		min(grid.x, max((unsigned int)0, (unsigned int)((p.x - extent_x) / BLOCK_X))),
+		min(grid.y, max((unsigned int)0, (unsigned int)((p.y - extent_y) / BLOCK_Y)))
 	};
 	rect_max = {
-		min(grid.x, max(0, static_cast<int>((p.x + extent_x + BLOCK_X - 1) / BLOCK_X))),
-		min(grid.y, max(0, static_cast<int>((p.y + extent_y + BLOCK_Y - 1) / BLOCK_Y)))
+		min(grid.x, max((unsigned int)0, (unsigned int)((p.x + extent_x + BLOCK_X - 1) / BLOCK_X))),
+		min(grid.y, max((unsigned int)0, (unsigned int)((p.y + extent_y + BLOCK_Y - 1) / BLOCK_Y)))
 	};
 }
 
