@@ -105,7 +105,9 @@ python recon_ct.py --data <data.pickle> --path <test_output_path> --method fdk
 
 You can download the datasets (synthetic and real) used in our paper:
 
-📦 **[Download Datasets](https://drive.google.com/drive/folders/1cedy5RM3Z2wG-jdVvo8aUl_l5ad2tvj6?usp=sharing)**
+📦 **[Download Datasets](https://drive.google.com/drive/folders/1cedy5RM3Z2wG-jdVvo8aUI_l5ad2tvj6?usp=sharing)**
+
+
 
 <details>
 <summary><b>Dataset Structure</b></summary>
